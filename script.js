@@ -12,6 +12,16 @@ const generateBtn = document.querySelector(".generateBtn");
 const allCheckBox = document.querySelectorAll("input[type=checkbox");
 const symbols = '~`!@#$%^&*()_-+={[}]|:;"<,>.?/';
 
+
+let password = "";
+let checkCount = 1;
+let passwordLength = 10;
+uppercaseCheck.checked = true;
+setIndicator("#ccc");
+handleSlider();
+
+
+
 // set password length and input slider background
 function handleSlider() {
   inputSlider.value = passwordLength;
@@ -26,13 +36,6 @@ function setIndicator(color) {
   indicator.style.backgroundColor = color;
   indicator.style.boxShadow = `0px 0px 12px 1px ${color}`;
 }
-
-let password = "";
-let checkCount = 1;
-let passwordLength = 10;
-uppercaseCheck.checked = true;
-setIndicator("#ccc");
-handleSlider();
 
 // handle input event on range slider
 inputSlider.addEventListener("input", (e) => {
